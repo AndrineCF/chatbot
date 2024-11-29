@@ -1,22 +1,21 @@
 langchain==0.3.7
 langchain-community==0.3.7
 langchain-text-splitters==0.3.2
-langchain-core==0.1.99  # Compatible with langchain-chroma
+langchain-core==0.3.18  # Keep the desired version
 langchain-ollama
 typing==3.7.4.3
 sentence-transformers==2.2.2
 torch==2.5.1
 pypdf
 uuid==1.30
-chromadb~=0.4.0  # Updated to match langchain-chroma
-numpy==1.21.6
+chromadb==0.4.2  # Compatible with newer langchain-core
 grpcio
 grpcio-tools
-langchain-chroma==0.1.0
+langchain-chroma==0.4.0  # Matches newer chromadb and langchain-core
 langchain-groq
 transformers==4.46.2
 psycopg2-binary==2.9.10
-streamlit~=1.40.1
+streamlit==1.40.1
 hugchat
 semchunk==2.2.0
 tokenizers==0.20.3
