@@ -8,7 +8,8 @@ sentence-transformers~=3.3.0
 torch~=2.5.1
 pypdf
 uuid~=1.30
-langchain_chroma
+chromadb==0.2.0
+langchain-chroma==0.1.0
 langchain-groq
 transformers~=4.46.2
 psycopg2-binary==2.9.10
