@@ -19,3 +19,4 @@ semchunk~=2.2.0
 tokenizers~=0.20.3
 Pillow
 python-dotenv~=1.0.1
+sqlite3
