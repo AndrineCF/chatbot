@@ -9,7 +9,7 @@ torch~=2.5.1
 pypdf
 uuid~=1.30
 chromadb==0.2.0
-langchain-chroma==0.1.0
+langchain-chroma>=0.1.2
 langchain-groq
 transformers~=4.46.2
 psycopg2-binary==2.9.10
@@ -19,4 +19,3 @@ semchunk~=2.2.0
 tokenizers~=0.20.3
 Pillow
 python-dotenv~=1.0.1
-langchain_chroma
