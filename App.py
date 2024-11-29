@@ -99,7 +99,7 @@ class App:
         with st.sidebar:
             st.title("GeoChat")
             st.write("Denne chatboten bruker AI for å besvare spørsmål.")
-            st.write("Den har tilgang til diverse produktspesifikasjon")
+            st.write("Den har tilgang til diverse ")
             self.selected_model_key = st.radio(
                 "**Velg chatmodell**",
                 list(self.chat_models.keys()),

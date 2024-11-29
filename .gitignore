@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+models
+kartverketDB
+dataTest
+database.ini
+__pycache__
+.env
