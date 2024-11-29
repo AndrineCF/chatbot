@@ -1,0 +1,3 @@
+# Embeddings/__init__.py
+from Embeddings.AutoEmbedding import AutoEmbedding
+from Embeddings.SentenceTransformerEmbeddings import SentenceTransformerEmbeddings

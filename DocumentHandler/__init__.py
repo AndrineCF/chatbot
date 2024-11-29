@@ -1,0 +1,3 @@
+# DocumentHandler/__init__.py
+from DocumentHandler.Recursive_character import recursiveCharacter
+from DocumentHandler.Semantic_chunking import semantic_chunking
