@@ -1,24 +1,24 @@
-langchain~=0.3.7
-langchain-community~=0.3.7
-langchain-text-splitters~=0.3.2
-langchain-core~=0.3.18
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-text-splitters==0.3.2
+langchain-core==0.1.99  # Compatible with langchain-chroma
 langchain-ollama
-typing~=3.7.4.3
-sentence-transformers~=2.2.2
-torch~=2.5.1
+typing==3.7.4.3
+sentence-transformers==2.2.2
+torch==2.5.1
 pypdf
-uuid~=1.30
-chromadb==0.4.0  # Use a version compatible with langchain-chroma
-numpy~=1.21.6
+uuid==1.30
+chromadb~=0.4.0  # Updated to match langchain-chroma
+numpy==1.21.6
 grpcio
 grpcio-tools
 langchain-chroma==0.1.0
 langchain-groq
-transformers~=4.46.2
+transformers==4.46.2
 psycopg2-binary==2.9.10
 streamlit~=1.40.1
 hugchat
-semchunk~=2.2.0
-tokenizers~=0.20.3
+semchunk==2.2.0
+tokenizers==0.20.3
 Pillow
-python-dotenv~=1.0.1
+python-dotenv==1.0.1
