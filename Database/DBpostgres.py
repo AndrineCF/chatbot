@@ -35,7 +35,7 @@ class DBpostgres:
     def get_vector_store(self):
         return self.vector_store
 
-    def add_document_chunks(self, chunks: List[Document] | list[list[dict[str, str | dict]]]):
+    def add_document_chunks(self, chunks: list[dict[str, list[str] | list[list[str]] | dict]]):
         """
         Adds a list of document chunks to the Chroma vector database.
 
@@ -64,7 +64,7 @@ class DBpostgres:
                 )
                 print("Successfully added documents to the database ✅")
 
-    def add_document_semantic_chunking(self, chunks: list[list[dict[str, str | dict]]]):
+    def add_document_semantic_chunking(self, chunks: list[dict[str, list[str] | list[list[str]] | dict]]):
         """
         Adds a list of document chunks to the Chroma vector database.
 

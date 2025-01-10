@@ -84,7 +84,8 @@ class DBchroma:
             print("Failed to clear the database ❌")
             
 
-    def add_document_chunks(self, chunks: List[Document] | list[str] | list[list[str] | list[list[str]]]):
+    def add_document_chunks(self,
+                            chunks: List[Document] | list[str] | list[list[str] | list[list[str]]]):
         """
         Adds a list of document chunks to the Chroma vector database.
 

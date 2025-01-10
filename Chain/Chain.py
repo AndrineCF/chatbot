@@ -90,7 +90,5 @@ class Chain:
         )["answer"]
         history.add_ai_message(answer)
 
-        print(history.aget_messages())
-
         return answer
 

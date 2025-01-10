@@ -3,7 +3,7 @@ import asyncio
 import uuid
 import streamlit as st
 from Embeddings import SentenceTransformerEmbeddings
-from Database import DBchroma
+from Database import DBpostgres
 from Llm.GroqLlm import GroqLlm
 from Retrieval import Retrieval
 from Chain import Chain
@@ -25,6 +25,7 @@ class App:
         Initialiserer App-klassen ved å sette opp komponenter for embeddings, database,
         språkmodell og retrieval-augmented generation (RAG).
         """
+        self.selected_model_key = None
         self.prompt = None
         self.chat_models = {
             "Llama 3.1": {"name": "llama-3.1-70b-versatile", "temperature": 0.7, "max_tokens": 510},
@@ -40,7 +41,7 @@ class App:
             st.session_state.embedding = SentenceTransformerEmbeddings(embedding_model, custom_cache_dir)
 
         if "db" not in st.session_state:
-            st.session_state.db = DBchroma(db_path, st.session_state.embedding, collection_name)
+            st.session_state.db = DBpostgres(db_path, st.session_state.embedding, collection_name)
 
         if "llm" not in st.session_state:
             st.session_state.llm = GroqLlm(model_name, 0.7, 510)

@@ -1,11 +1,12 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.retrievers import ParentDocumentRetriever, EnsembleRetriever
 from langchain_core.retrievers import BaseRetriever
-from Database import DBchroma
+from Database import DBchroma, DBpostgres
+
 
 class Retrieval:
     def __init__(self, 
-                 db: DBchroma
+                 db: DBchroma | DBpostgres
                  ) -> None:
         print("Creating a retrieve 🔎")
         print(db.get_vector_store())
