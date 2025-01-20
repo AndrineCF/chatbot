@@ -45,10 +45,10 @@ def setup_backend():
     # Spilt the documents into chucks and add to the database
     for loader in loaders:
         chunks = semantic_chunking(loader, CHUNK_SIZE, tokenizer)
-        db.add_document_chunks(chunks)
+        db.add_document_semantic_chunking(chunks)
 
 if __name__ == '__main__':
-    #setup_backend()
+    setup_backend()
 
-    app = App(CONNECTION_STRING, EMBEDDING_MODEL_NAME, MODEL_NAME, COLLECTION_NAME, CUSTOM_CACHE_DIR)
-    app.initialize()
+    #app = App(CONNECTION_STRING, EMBEDDING_MODEL_NAME, MODEL_NAME, COLLECTION_NAME, CUSTOM_CACHE_DIR)
+    #app.initialize()

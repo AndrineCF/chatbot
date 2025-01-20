@@ -77,11 +77,14 @@ class DBpostgres:
         """
         print("Adding document to database 📨")
 
+        metadatas = []
+
         # Iterate over each chunk
         for chunk_list in chunks:
             for chunk_data in chunk_list:
-                text_chunk = chunk_data.get('chunk')
-                metadata = chunk_data.get('metadata')
+                text_chunk = chunk_data['chunk']
+                metadata =  chunk_data['metadata']
+                metadatas.append(chunk_data['metadata'])
 
                 if text_chunk and metadata:
                     # Generate a unique identifier (UUID) for this chunk
@@ -93,7 +96,7 @@ class DBpostgres:
                         ids=[uuid],  # The generated UUID
                         collection_name=self.collection_name,  # Collection to store the chunks
                         embedding=self.embedding_model,  # The embedding model to use
-                        metadatas=[metadata]  # Attach metadata to the chunk
+                        metadatas=[metadatas]  # Attach metadata to the chunk
                     )
                 else:
                     print(f"Skipping invalid chunk: {chunk_data}")
